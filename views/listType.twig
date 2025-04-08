@@ -1,0 +1,13 @@
+ {% from "btn.html.twig" import btn as btn %} 
+   <ul class="list-group">
+            <li class="list-group-item">  
+                    {{ btn("Марк 2 JSX 90", "/mark90", true) }}
+                    {{ btn("Картинка", "/mark90/image", true, "outline-primary") }}
+                    {{ btn("Описание", "/mark90/info", true, "outline-primary") }}
+            </li>
+            <li class="list-group-item">
+                    {{ btn("Марк 2 JSX 100", "/mark100", true) }}
+                    {{ btn("Картинка", "/mark100/image", true, "outline-primary") }}
+                    {{ btn("Описание", "/mark100/info", true, "outline-primary") }}
+            </li> 
+        </ul>

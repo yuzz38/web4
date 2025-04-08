@@ -1,0 +1,20 @@
+{% extends "__layout.twig" %} 
+{% block content %}
+    <div>
+       <br><h2> Тайота MARK II {{ title }}</h2>
+    </div>
+    <ul class="nav nav-pills">
+        {% for item in submenu %}
+            <li class="nav-item">
+            
+               <a class="nav-link {{ current_url == current_url | split('/') | slice(0, 2) | join('/') ~ item.url ? 'active' }}" href="{{ current_url | split('/') | slice(0, 2) | join('/') ~ item.url }}">{{ item.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <div class="border p-3 mt-3">
+    {% block objectContent %}
+        <strong>Выберите что хотите узнать</strong>
+    {% endblock %}
+    </div>
+    
+{% endblock %}

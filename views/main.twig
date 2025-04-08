@@ -1,0 +1,9 @@
+{% extends "__layout.twig" %}
+{% block content %}
+    <div>
+        <strong>Выбери кузов своего Toyota Mark II</strong><br><br>
+        {% include 'listType.twig' %}
+    </div>
+    {% block objectContent %}
+    {% endblock %}
+{% endblock %}
